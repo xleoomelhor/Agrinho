@@ -1,0 +1,188 @@
+body {
+    font-family: 'Lora', serif;
+    background-color: #000;
+    color: #ddd;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50; /* Verde bonito */
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha os itens ao início */
+    gap: 20px; /* Espaçamento entre os itens */
+    position: relative;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 1.0em; /* Tamanho do título */
+    font-family: 'Roboto Slab', serif; /* Fonte elegante */
+    flex: 1; /* Permite que o título ocupe o espaço restante */
+}
+
+.banner-img {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-right: 20px; /* Espaço entre a imagem e o título */
+}
+
+#weather-button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1.0em;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    left: 50%; /* Move o botão para o centro horizontal */
+    top: -10px; /* Ajusta a posição vertical para cima */
+    transform: translateX(-50%); /* Ajusta a posição para centralizar */
+}
+
+#weather-button:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 55%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px; /* Bordas arredondadas do contêiner */
+    box-shadow: 0 0 20px 5px rgba(0, 255, 0, 0.7); /* Efeito neon verde */
+    margin-bottom: 20px; /* Adiciona um espaçamento abaixo da imagem neon */
+}
+
+.image-container img {
+    width: 100%; /* Ajuste a largura conforme necessário */
+    height: auto;
+    display: block;
+    border-radius: 15px; /* Bordas arredondadas */
+}
+
+.description-container {
+    width: 45%;
+    padding-left: 20px;
+}
+
+.parallax-container {
+    position: relative;
+    height: 400px; /* Aumenta a altura do contêiner parallax */
+    overflow: hidden;
+    margin-bottom: 20px; /* Adiciona um espaçamento abaixo da seção parallax */
+}
+
+.parallax {
+    background-image: url('img/background parallax.jpg'); /* Caminho para a imagem de fundo */
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    font-family: 'Lora', serif; /* Aplicar fonte Lora */
+    font-size: 1.0em; /* Tamanho da fonte do parágrafo */
+    line-height: 1.6; /* Melhorar a legibilidade com um bom espaçamento entre linhas */
+    color: #ddd; /* Cor do texto para contraste */
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #4CAF50;
+    font-family: 'ChunkFive-Regular', serif; /* Aplicar fonte Chunk Five */
+    font-size: 2.5em; /* Aumentar tamanho da fonte */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+    padding: 20px;
+    border: 3px solid #4CAF50; /* Borda verde */
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center;
+    margin-top: 20px; /* Espaço superior */
+    margin-bottom: 20px; /* Espaço inferior */
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    -webkit-overflow-scrolling: touch; /* Suaviza a rolagem no iOS */
+}
+
+.carousel-item {
+    flex: none;
+    scroll-snap-align: start;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tooltip {
+    position: absolute;
+    top: 0; /* Posiciona o tooltip no topo */
+    left: 0; /* Posiciona o tooltip à esquerda */
+    width: 100%; /* Faz o tooltip ocupar a largura inteira do item do carrossel */
+    height: 100%; /* Faz o tooltip ocupar a altura inteira do item do carrossel */
+    background-color: rgba(0, 128, 0, 0.7); /* Fundo verde transparente */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex; /* Usa flexbox para centralizar o texto */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease; /* Transição suave para aparecer e desaparecer */
+}
+
+.carousel-item:hover .tooltip {
+    opacity: 1; /* Faz o tooltip aparecer ao passar o mouse */
+}
+
+#content-sections {
+    padding: 20px;
+    margin-top: 20px; /* Adiciona um espaçamento acima para não sobrepor o carrossel */
+}
+
+.content-section {
+    display: none;
+    padding: 20px;
+}
+
+.content-section.active {
+    display: block;
+}
